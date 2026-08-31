@@ -272,7 +272,7 @@ class Flipbook {
     // fallback jika transitionend tidak terpicu (misal display none tiba-tiba)
     setTimeout(() => {
       if (layer.parentNode) onEnd();
-    }, 700);
+    }, 1050);
   }
 
   /* ---------------------------------------------------------------- */

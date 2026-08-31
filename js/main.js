@@ -61,7 +61,7 @@
 
     card.innerHTML = `
       <div class="book-card__cover">
-        <img src="${book.coverImage}" alt="Sampul buku ${book.title}" loading="lazy" width="924" height="1316">
+        <img src="${book.coverImage}" alt="Sampul buku ${book.title}" loading="lazy" width="${book.coverWidth}" height="${book.coverHeight}" style="aspect-ratio:${book.coverWidth}/${book.coverHeight};">
       </div>
       <div class="book-card__body">
         <span class="book-card__category">${book.category}</span>
