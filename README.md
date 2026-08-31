@@ -40,21 +40,16 @@ diunduh pengguna (`assets/books/<slug>/pdf/*.pdf`) disusun ulang dari
 gambar-gambar halaman asli tersebut (tanpa mengubah isi/urutan halaman) agar
 menjadi file PDF yang valid dan bisa dibuka di pembaca PDF mana pun.
 
-## Yang perlu diganti sebelum go-live
+## Aset resmi yang dipakai
 
-Dua aset berikut adalah placeholder buatan (bukan aset resmi Kementerian
-Perdagangan), karena file logo resmi dan foto gedung tidak tersedia dalam
-materi yang diunggah:
+- `assets/img/logo-kemendag.png` — file logo resmi Kementerian Perdagangan RI
+  yang diunggah, dipakai apa adanya (tidak digambar ulang) dengan
+  `object-fit: contain` di header.
+- `assets/img/gedung-bpsdmp.jpg` — foto gedung resmi yang diunggah, dipakai
+  apa adanya (tanpa AI/ilustrasi) sebagai visual utama hero, dengan
+  `object-fit: contain` agar tidak ada bagian gedung yang terpotong.
 
-- `assets/img/logo-kemendag.svg` — ganti dengan file logo resmi Kementerian
-  Perdagangan RI.
-- `assets/img/hero-building.svg` — ganti dengan foto asli gedung
-  BPSDMP/Kementerian Perdagangan.
-
-Cukup timpa (replace) kedua file tersebut dengan nama file yang sama, atau
-ubah path-nya di `index.html`.
-
-Tautan Instagram/YouTube/Website di footer juga masih berupa `#` karena URL
+Tautan Instagram/YouTube/Website di footer masih berupa `#` karena URL
 resminya belum diberikan — isi `href` pada bagian `.footer-social` di
 `index.html` setelah tersedia.
 
