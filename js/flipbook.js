@@ -105,6 +105,7 @@ class Flipbook {
     if (!this.book) return;
     const spread = this.els.spread;
     spread.innerHTML = "";
+    this._fitSpread();
 
     if (this.isMobile) {
       const leaf = this._makeLeaf("leaf--single", this.currentRight);
@@ -118,6 +119,37 @@ class Flipbook {
     }
     this._updateUI();
     this._preloadAround(this.currentRight);
+  }
+
+  /**
+   * Hitung tinggi spread agar selalu "fit to screen": mempertimbangkan aspect
+   * ratio asli halaman buku (potret maupun lanskap) supaya buku yang lebih
+   * lebar/landscape (mis. Panduan Agen Perubahan) tidak meluber dari viewport,
+   * sekaligus tetap besar & nyaman dibaca untuk buku potret pada umumnya.
+   */
+  _fitSpread() {
+    const stageRect = this.els.stage.getBoundingClientRect();
+    if (!stageRect.width || !stageRect.height) return;
+    const marginX = this.isMobile ? 16 : 36;
+    const marginY = this.isMobile ? 16 : 28;
+    const availW = Math.max(120, stageRect.width - marginX * 2);
+    const availH = Math.max(120, stageRect.height - marginY * 2);
+
+    const leaves = this.isMobile ? 1 : 2;
+    const ratio = (this.book.coverWidth || 924) / (this.book.coverHeight || 1316); // lebar:tinggi 1 halaman
+
+    let h = availH;
+    let w = h * ratio * leaves;
+    if (w > availW) {
+      w = availW;
+      h = w / (ratio * leaves);
+    }
+
+    // batas atas kenyamanan agar buku tidak terasa raksasa di layar besar
+    const softCap = this.isMobile ? 620 : 700;
+    if (h > softCap) h = softCap;
+
+    this.els.spread.style.height = `${Math.round(h)}px`;
   }
 
   _makeLeaf(cls, pageNum) {

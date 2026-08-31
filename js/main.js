@@ -70,9 +70,11 @@
         <p class="desc">${book.description}</p>
         <p class="book-card__meta">${book.totalPages} halaman</p>
         <div class="book-card__actions">
-          <button class="btn btn--primary btn-baca" data-slug="${book.slug}">${iconSvg("book")} BACA BUKU</button>
-          <button class="btn btn--outline btn-unduh" data-slug="${book.slug}">${iconSvg("download")} UNDUH PDF</button>
-          <button class="btn btn--icon btn-qr" data-slug="${book.slug}" aria-label="Tampilkan QR Code untuk ${book.title}" title="QR Code">${iconSvg("qr")}</button>
+          <button class="btn btn--primary btn--block btn-baca" data-slug="${book.slug}">${iconSvg("book")} BACA BUKU</button>
+          <div class="book-card__actions-row2">
+            <button class="btn btn--outline btn-unduh" data-slug="${book.slug}">${iconSvg("download")} UNDUH PDF</button>
+            <button class="btn btn--icon btn-qr" data-slug="${book.slug}" aria-label="Tampilkan QR Code untuk ${book.title}" title="QR Code">${iconSvg("qr")}</button>
+          </div>
         </div>
       </div>
     `;
@@ -91,7 +93,8 @@
 
   renderGrid(BOOKS);
 
-  // Statistik total halaman untuk bagian "Tentang"
+  // Statistik dibaca dinamis dari BOOKS — otomatis menyesuaikan saat buku baru ditambahkan
+  document.getElementById("stat-books").textContent = BOOKS.length;
   const totalPages = BOOKS.reduce((sum, b) => sum + b.totalPages, 0);
   document.getElementById("stat-pages").textContent = totalPages;
   document.getElementById("footer-year").textContent = new Date().getFullYear();
