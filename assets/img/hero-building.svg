@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bcd8f5"/>
+      <stop offset="100%" stop-color="#eaf3fc"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e6fb8"/>
+      <stop offset="100%" stop-color="#0b2c56"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="550" fill="url(#sky)"/>
+  <rect y="430" width="800" height="120" fill="#dce8f6"/>
+
+  <!-- back low building -->
+  <rect x="40" y="300" width="180" height="150" fill="#c9d9ee"/>
+  <rect x="600" y="270" width="170" height="180" fill="#c9d9ee"/>
+
+  <!-- main tower -->
+  <rect x="270" y="120" width="270" height="330" fill="url(#glass)"/>
+  <g fill="#5f9be0" opacity="0.55">
+    <!-- window grid -->
+  </g>
+  <g fill="#8fbdea">
+    <rect x="284" y="140" width="18" height="24"/><rect x="312" y="140" width="18" height="24"/><rect x="340" y="140" width="18" height="24"/><rect x="368" y="140" width="18" height="24"/><rect x="396" y="140" width="18" height="24"/><rect x="424" y="140" width="18" height="24"/><rect x="452" y="140" width="18" height="24"/><rect x="480" y="140" width="18" height="24"/><rect x="508" y="140" width="18" height="24"/>
+    <rect x="284" y="176" width="18" height="24"/><rect x="312" y="176" width="18" height="24"/><rect x="340" y="176" width="18" height="24"/><rect x="368" y="176" width="18" height="24"/><rect x="396" y="176" width="18" height="24"/><rect x="424" y="176" width="18" height="24"/><rect x="452" y="176" width="18" height="24"/><rect x="480" y="176" width="18" height="24"/><rect x="508" y="176" width="18" height="24"/>
+    <rect x="284" y="212" width="18" height="24"/><rect x="312" y="212" width="18" height="24"/><rect x="340" y="212" width="18" height="24"/><rect x="368" y="212" width="18" height="24"/><rect x="396" y="212" width="18" height="24"/><rect x="424" y="212" width="18" height="24"/><rect x="452" y="212" width="18" height="24"/><rect x="480" y="212" width="18" height="24"/><rect x="508" y="212" width="18" height="24"/>
+    <rect x="284" y="248" width="18" height="24"/><rect x="312" y="248" width="18" height="24"/><rect x="340" y="248" width="18" height="24"/><rect x="368" y="248" width="18" height="24"/><rect x="396" y="248" width="18" height="24"/><rect x="424" y="248" width="18" height="24"/><rect x="452" y="248" width="18" height="24"/><rect x="480" y="248" width="18" height="24"/><rect x="508" y="248" width="18" height="24"/>
+    <rect x="284" y="284" width="18" height="24"/><rect x="312" y="284" width="18" height="24"/><rect x="340" y="284" width="18" height="24"/><rect x="368" y="284" width="18" height="24"/><rect x="396" y="284" width="18" height="24"/><rect x="424" y="284" width="18" height="24"/><rect x="452" y="284" width="18" height="24"/><rect x="480" y="284" width="18" height="24"/><rect x="508" y="284" width="18" height="24"/>
+    <rect x="284" y="320" width="18" height="24"/><rect x="312" y="320" width="18" height="24"/><rect x="340" y="320" width="18" height="24"/><rect x="368" y="320" width="18" height="24"/><rect x="396" y="320" width="18" height="24"/><rect x="424" y="320" width="18" height="24"/><rect x="452" y="320" width="18" height="24"/><rect x="480" y="320" width="18" height="24"/><rect x="508" y="320" width="18" height="24"/>
+    <rect x="284" y="356" width="18" height="24"/><rect x="312" y="356" width="18" height="24"/><rect x="340" y="356" width="18" height="24"/><rect x="368" y="356" width="18" height="24"/><rect x="396" y="356" width="18" height="24"/><rect x="424" y="356" width="18" height="24"/><rect x="452" y="356" width="18" height="24"/><rect x="480" y="356" width="18" height="24"/><rect x="508" y="356" width="18" height="24"/>
+  </g>
+
+  <!-- entrance base -->
+  <rect x="250" y="440" width="310" height="20" fill="#0b2c56"/>
+  <rect x="250" y="430" width="310" height="10" fill="#c69a3e"/>
+
+  <!-- flag poles -->
+  <line x1="595" y1="200" x2="595" y2="450" stroke="#7a8ba3" stroke-width="4"/>
+  <path d="M595 200 L640 214 L595 228 Z" fill="#c8202f"/>
+  <line x1="620" y1="230" x2="620" y2="450" stroke="#7a8ba3" stroke-width="4"/>
+  <path d="M620 230 L620 262 L662 246 L620 230 Z" fill="#ffffff" stroke="#c8202f" stroke-width="2"/>
+
+  <!-- trees -->
+  <g fill="#2f7d55">
+    <circle cx="150" cy="420" r="26"/>
+    <circle cx="180" cy="435" r="20"/>
+    <circle cx="650" cy="430" r="24"/>
+    <circle cx="690" cy="440" r="18"/>
+    <circle cx="720" cy="425" r="22"/>
+  </g>
+  <g stroke="#6b4a2c" stroke-width="6">
+    <line x1="150" y1="420" x2="150" y2="452"/>
+    <line x1="650" y1="430" x2="650" y2="460"/>
+    <line x1="720" y1="425" x2="720" y2="456"/>
+  </g>
+
+  <!-- ground line -->
+  <rect x="0" y="450" width="800" height="4" fill="#0b2c56" opacity="0.15"/>
+</svg>
